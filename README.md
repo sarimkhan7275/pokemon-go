@@ -1,8 +1,8 @@
-# 🧪 Pokémon Research Lab
+# 🧪 Pokemon Research Lab
 
 A web app built with **Next.js, TailwindCSS, and ShadCN UI** that allows you to:
-- Fetch the **full Pokédex dataset** from the PokéAPI.
-- Upload large **CSV datasets** and map headers to Pokémon fields.
+- Fetch the **full Pokedex dataset** from the PokeAPI.
+- Upload large **CSV datasets** and map headers to Pokemon fields.
 - Display everything in a **fast, virtualized, editable table**.
 - Add your own custom columns.
 - Save/load data from **IndexedDB** and export back to CSV.
@@ -10,15 +10,14 @@ A web app built with **Next.js, TailwindCSS, and ShadCN UI** that allows you to:
 ---
 
 ## 🚀 Live Demo
-🔗 [Deployed on Vercel](https://your-vercel-link.vercel.app)  
-*(replace with your actual deployed URL)*
+🔗 [Deployed on Vercel](https://pokemon-tan-delta.vercel.app/)  
 
 ---
 
 ## 📂 Features
-- ⚡ **Full Pokédex Loader** – fetches all Pokémon with progress tracking.
+- ⚡ **Full Pokedex Loader** – fetches all Pokemon with progress tracking.
 - 📊 **Virtualized Table** – smooth scrolling for 1000+ rows using TanStack Virtual.
-- ✍️ **Inline Editing** – edit Pokémon fields directly inside the table.
+- ✍️ **Inline Editing** – edit Pokemon fields directly inside the table.
 - ➕ **Custom Columns** – add your own fields (string, number, boolean).
 - 📥 **CSV Import** – upload CSV, map headers → fields, and merge data.
 - 📤 **CSV Export** – download current dataset with custom fields included.
@@ -43,8 +42,8 @@ A web app built with **Next.js, TailwindCSS, and ShadCN UI** that allows you to:
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/your-username/pokemon-research-lab.git
-   cd pokemon-research-lab
+   git clone https://github.com/sarimkhan7275/pokemon-go
+   cd pokemon-go
 
 
 # Architecture & Decisions
@@ -55,14 +54,14 @@ A web app built with **Next.js, TailwindCSS, and ShadCN UI** that allows you to:
 
 ## Zustand Store
 Central source of truth for:
-- **Pokémon dataset**  
+- **Pokemon dataset**  
 - **Progress tracking**  
 - **Custom column definitions**  
 
 Chosen for its **minimal boilerplate** compared to Redux.
 
 ## Virtualized Table
-- With **1000+ Pokémon**, rendering all rows would cause performance issues.  
+- With **1000+ Pokemon**, rendering all rows would cause performance issues.  
 - **TanStack Virtual** ensures only visible rows are rendered → smooth scrolling.
 
 ## CSV Handling with PapaParse
@@ -74,7 +73,6 @@ Chosen for its **minimal boilerplate** compared to Redux.
 
 ## UI with ShadCN + Tailwind
 - Provides **consistent styling**  
-- Built-in **dark mode**  
 - Accessible components
 
 
@@ -82,7 +80,7 @@ Chosen for its **minimal boilerplate** compared to Redux.
 # 🏎️ Performance Optimizations
 
 ## Batch API Fetching
-- Pokémon data is fetched in **batches of 20** instead of one-by-one → ~10x faster.
+- Pokemon data is fetched in **batches of 20** instead of one-by-one → ~10x faster.
 
 ## Virtualized Table Rendering
 - Only renders **visible rows**, reducing DOM overhead for **1000+ rows**.
@@ -97,7 +95,7 @@ Chosen for its **minimal boilerplate** compared to Redux.
 # ⚠️ Challenges & Solutions
 
 ## Slow API Fetching
-- Initially fetched Pokémon one at a time → too slow.  
+- Initially fetched Pokemon one at a time → too slow.  
 ✅ **Fixed by batching requests.**
 
 ## Rendering 1000+ Rows
